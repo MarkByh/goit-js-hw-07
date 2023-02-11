@@ -13,10 +13,6 @@ const galeryList = galleryItems.map(item => {
     </a>`
 }).join(' ');
 gallery.insertAdjacentHTML('beforeend', galeryList)
-gallery.addEventListener('click', showImage)
-function showImage(event){
-    event.preventDefault();
-    const bigImg = event.target.dataset.source;
-    var lightbox = new SimpleLightbox('.gallery a', {  captionsData: 'alt',  captionDelay: 250,});
-}
- 
+
+ const lightbox = new SimpleLightbox('.gallery a', {  captionsData: 'alt',  captionDelay: 250,});
+
